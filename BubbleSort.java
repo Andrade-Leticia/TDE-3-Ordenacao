@@ -3,21 +3,26 @@
 
 public class BubbleSort {
     public static int trocasFeitas;
+    public static int iteracoesFeitas;
 
     static void bubbleSort(int tamanho, int[] vetor){
         trocasFeitas = 0;
+        iteracoesFeitas = 0;
 
-        for (int i = 0; i < tamanho - 1; i++){
-            for (int j = 1; j < tamanho - i; j++){
-                if (vetor[j - 1] > vetor[j]){
+        int i = 0;
+        while (i < tamanho - 1) {
+            int j = 1;
+            while (j < tamanho - i) {
+                iteracoesFeitas++;
+                if (vetor[j - 1] > vetor[j]) {
                     int temp = vetor[j - 1];
                     vetor[j - 1] = vetor[j];
                     vetor[j] = temp;
                     trocasFeitas++;
                 }
+                j++;
             }
+            i++;
         }
     }
 }
-
-
