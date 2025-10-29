@@ -43,6 +43,7 @@ vetor3 = {99, 85, 73, 60, 50, 40, 35, 30, 25, 20, 15, 14, 13, 12, 11, 10, 9, 8, 
 
 ## Comparação de iterações
 | Algoritmo | Vetor1 | Vetor2 | Vetor3 |
+| --------- | ------ | ------ | ------ |
 | Comb Sort | 129 | 110 | 129 | 
 | Gnome Sort | 0 | 0 | 0 |
 | Bucket Sort | 83 | 86 | 113 |
