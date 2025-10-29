@@ -6,48 +6,35 @@ public class BucketSort {
     static final int b = 5; //b p/ representar bucket
     public static int trocasFeitas;
 
-    static void bucketSort(int tamanho, int[] vetor, int min, int max){
+    static void bucketSort(int tamanho, int[] vetor, int min, int max) {
         trocasFeitas = 0;
 
-        int i,j,k;
         int div = (max - min) / b;
-        if (div == 0){
-            div = 1;
-        }
+        if (div == 0) div = 1;
+
         int[][] buckets = new int[b][tamanho];
         int[] contagem = new int[b];
-        i = 0;
-        while (i < tamanho){
-            int indice = (vetor[i] - min) / div;
-            if (indice < 0){
-                indice = 0;
-            } else if (indice >= b){
-                indice = b - 1;
-            }
-            buckets[indice][contagem[indice]] = vetor[i];
-            contagem[indice]++;
-            i++;
-        }
 
-        i = 0; //Bublle Sirt p/ ordenar cada bucket
-        while (i < b){
-            if (contagem[i] > 0){
-                BubbleSort.bubbleSort(contagem[i],buckets[i]);
+        for (int i = 0; i < tamanho; i++) {
+            int indice = (vetor[i] - min) / div;
+            if (indice < 0) indice = 0;
+            else if (indice >= b) indice = b - 1;
+
+            buckets[indice][contagem[indice]++] = vetor[i];
+        }
+        //Bublle Sort p/ ordenar cada bucket
+        for (int i = 0; i < b; i++) {
+            if (contagem[i] > 0) {
+                BubbleSort.bubbleSort(contagem[i], buckets[i]);
                 trocasFeitas += BubbleSort.trocasFeitas;
             }
-            i++;
         }
 
-        k = 0;
-        i = 0;
-        while (i < b){
-            j = 0;
-            while (j < contagem[i]){
-                vetor[k] = buckets[i][j];
-                k++;
-                j++;
+        int k = 0;
+        for (int i = 0; i < b; i++) {
+            for (int j = 0; j < contagem[i]; j++) {
+                vetor[k++] = buckets[i][j];
             }
-            i++;
         }
     }
 }
