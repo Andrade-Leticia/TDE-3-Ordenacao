@@ -54,4 +54,27 @@ vetor3 = {99, 85, 73, 60, 50, 40, 35, 30, 25, 20, 15, 14, 13, 12, 11, 10, 9, 8, 
 | Cocktail Sort | 154 | 19 | 190 |
 
 ## Análise de resultados
--
+- Vetor1:
+  - Melhor algoritmo para esse vetor foi o Bucket Sort (13 trocas e 83 iterações).
+
+- Vetor2:
+  - Esse vetor já estava ordenado, o que significa que não foram feitas trocas em nenhum algoritmo;
+  - Algoritmo com o menor número de iterações foi o Cocktail Sort com 19 iterações.
+
+- Vetor3:
+  - Melhor algoritmo para trocas foi o Selection Sort com 10 trocas feitas;
+  - Melhor algoritmo para iterações foi o Bucket Sort com 113 iterações;
+  - O melhor algoritmo no geral para esse vetor seria o Selection Sort pois ele teve um número muito menor de trocas.
+
+- Análise geral:
+  - O algoritmo Bucket Sort obteve o melhor equilíbrio entre trocas e iterações nos três vetores apresentados no projeto, com isso concluímos que para este cenário, ele seria a melhor opção para ordenação.
+    
+  - Resultado geral:
+    | Algoritmo | Desempenho |
+    | --------- | ---------- |
+    | Bucket Sort	| Melhor no Vetor 1, bom desempenho geral. |
+    | Cocktail Sort	| Melhor no Vetor 2, ótimo quando o vetor já está ordenado. |
+    | Selection Sort |	Melhor no Vetor 3, poucas trocas mas muitas iterações. |
+    | Comb Sort |	Razoável em todos, mas nunca o melhor. |
+    | Gnome / Bubble Sort	| Muito custosos (muitas trocas e iterações). |
+    
