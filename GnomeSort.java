@@ -9,21 +9,21 @@ public class GnomeSort {
         trocasFeitas = 0;
         iteracoesFeitas = 0;
         int i = 0;
+
         while (i < tamanho) {
-            if (i == 0) {
+            iteracoesFeitas++;
+
+            if (i == 0 || vetor[i - 1] <= vetor[i]) {
                 i++;
             } else {
-                iteracoesFeitas++; //comparação entre adjacentes
-                if (vetor[i - 1] <= vetor[i]) {
-                    i++;
-                } else {
-                    int temp = vetor[i];
-                    vetor[i] = vetor[i - 1];
-                    vetor[i - 1] = temp;
-                    trocasFeitas++;
-                    i--;
-                }
+                int temp = vetor[i];
+                vetor[i] = vetor[i - 1];
+                vetor[i - 1] = temp;
+                trocasFeitas++;
+                i--;
             }
         }
     }
 }
+
+
