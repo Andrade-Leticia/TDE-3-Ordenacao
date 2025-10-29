@@ -1,5 +1,5 @@
 public class Main {
-    static void imprimir(String titulo, int[] v, int tamanho){ //v = vetor
+    static void imprimir(String titulo, int[] v, int tamanho){
         System.out.println(titulo);
         int i = 0;
         while (i < tamanho){
@@ -42,26 +42,39 @@ public class Main {
         copiar(vetorOrigem, copia,tamanho);
         imprimir("Vetor original: ", copia, tamanho);
 
+        int trocas = 0;
+        int iteracoes = 0;
+
         if (nome == "Comb Sort"){
             CombSort.combSort(tamanho,copia);
-            System.out.println("Trocas feitas: " + CombSort.trocasFeitas);
+            trocas = CombSort.trocasFeitas;
+            iteracoes = CombSort.iteracoesFeitas;
         } else if (nome == "Gnome Sort"){
             GnomeSort.gnomeSort(tamanho, copia);
-            System.out.println("Trocas feitas: " + GnomeSort.trocasFeitas);
+            trocas = GnomeSort.trocasFeitas;
+            iteracoes = GnomeSort.iteracoesFeitas;
         } else if (nome == "Bucket Sort"){
             BucketSort.bucketSort(tamanho,copia, minimo(copia, tamanho),maximo(copia, tamanho));
-            System.out.println("Trocas feitas: " + GnomeSort.trocasFeitas);
+            trocas = BucketSort.trocasFeitas;
+            iteracoes = BucketSort.iteracoesFeitas;
         }else if (nome == "Bubble Sort"){
             BubbleSort.bubbleSort(tamanho, copia);
-            System.out.println("Trocas feitas: " +BubbleSort.trocasFeitas);
+            trocas = BubbleSort.trocasFeitas;
+            iteracoes = BubbleSort.iteracoesFeitas;
         }else if (nome == "Selection Sort"){
             SelectionSort.selectionSort(tamanho, copia);
-            System.out.println("Trocas feitas: " + SelectionSort.trocasFeitas);
+            trocas = SelectionSort.trocasFeitas;
+            iteracoes = SelectionSort.iteracoesFeitas;
         } else if (nome == "Cocktail Sort"){
             CocktailSort.cocktailSort(tamanho, copia);
-            System.out.println("Trocas feitas: " + CocktailSort.trocasFeitas);
+            trocas = CocktailSort.trocasFeitas;
+            iteracoes = CocktailSort.iteracoesFeitas;
         }
-        imprimir("Vetor foi ordenado por " + nome + ":", copia,tamanho);
+        System.out.println(" *** Resultado " + nome + " *** ");
+        System.out.println(" Trocas: " + trocas );
+        System.out.println(" Iterações: " + iteracoes );
+        System.out.println(" -----------------------\n " );
+
     }
 
     public static void main(String[] args){
