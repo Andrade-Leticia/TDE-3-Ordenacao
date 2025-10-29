@@ -6,12 +6,11 @@ public class BubbleSort {
 
     static void bubbleSort(int tamanho, int[] vetor){
         trocasFeitas = 0;
-        int temp = 0;
 
-        for (int i = 0; i < tamanho; i++){
-            for (int j = 0; j < tamanho; j++){
+        for (int i = 0; i < tamanho - 1; i++){
+            for (int j = 1; j < tamanho - i; j++){
                 if (vetor[j - 1] > vetor[j]){
-                    temp = vetor[j - 1];
+                    int temp = vetor[j - 1];
                     vetor[j - 1] = vetor[j];
                     vetor[j] = temp;
                     trocasFeitas++;
@@ -20,3 +19,5 @@ public class BubbleSort {
         }
     }
 }
+
+
