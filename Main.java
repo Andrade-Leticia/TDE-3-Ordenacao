@@ -84,7 +84,7 @@ public class Main {
 
         int[][] vetores = {vetor1, vetor2, vetor3};
         int tamanho = 20;
-        String[] algoritmos = {"Comb Sort", "Gnome Stort", "Bucket Sort", "Bubble Sort", "Selection Sort", "Cocktail Sort"};
+        String[] algoritmos = {"Comb Sort", "Gnome Sort", "Bucket Sort", "Bubble Sort", "Selection Sort", "Cocktail Sort"};
 
         int i  = 0;
         while (i < 3){
@@ -98,3 +98,4 @@ public class Main {
         }
     }
 }
+
