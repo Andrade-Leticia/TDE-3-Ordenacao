@@ -3,9 +3,11 @@
 
 public class CombSort {
     public static int trocasFeitas;
+    public static int iteracoesFeitas;
 
     static void combSort(int tamanho, int[] vetor){
         trocasFeitas = 0;
+        iteracoesFeitas = 0;
         int sorted = 0;
         int gap = tamanho;
 
@@ -16,15 +18,19 @@ public class CombSort {
                 sorted = 1;
             }
 
-            for (int i = 0; i < tamanho - gap; i++){
-                int sm = gap + 1; //sm variavel segundo elementop no material de apoio
-                if (vetor[i] > vetor[sm]){
+            int i = 0;
+            while (i < tamanho - gap) {
+                iteracoesFeitas++;
+
+                int sm = i + gap; // índice do segundo elemento a comparar
+                if (vetor[i] > vetor[sm]) {
                     int aux = vetor[sm];
                     vetor[sm] = vetor[i];
                     vetor[i] = aux;
                     sorted = 0;
                     trocasFeitas++;
                 }
+                i++;
             }
         }
     }
