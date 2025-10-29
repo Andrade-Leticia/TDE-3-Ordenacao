@@ -37,7 +37,7 @@ vetor3 = {99, 85, 73, 60, 50, 40, 35, 30, 25, 20, 15, 14, 13, 12, 11, 10, 9, 8, 
 | Algoritmo | Vetor1 | Vetor2 | Vetor3 |
 | --------- | ------ | ------ | ------ |
 | Comb Sort | 22     | 0      | 18     | 
-| Gnome Sort | 0 | 0 | 0 |
+| Gnome Sort | 78 | 0 | 190 |
 | Bucket Sort | 13 | 0 | 63 |
 | Bubble Sort | 78 | 0 | 190 |
 | Selection Sort | 18 | 0 | 10 |
@@ -47,7 +47,7 @@ vetor3 = {99, 85, 73, 60, 50, 40, 35, 30, 25, 20, 15, 14, 13, 12, 11, 10, 9, 8, 
 | Algoritmo | Vetor1 | Vetor2 | Vetor3 |
 | --------- | ------ | ------ | ------ |
 | Comb Sort | 129 | 110 | 129 | 
-| Gnome Sort | 0 | 0 | 0 |
+| Gnome Sort | 176 | 20 | 400 |
 | Bucket Sort | 83 | 86 | 113 |
 | Bubble Sort | 190 | 190 | 190 |
 | Selection Sort | 190 | 190 | 190 |
